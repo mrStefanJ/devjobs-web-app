@@ -1,0 +1,49 @@
+<div class="job-detail__container" *ngIf="jobData">
+    <div class="container--company">
+        <mat-card class="card">
+            <div class="logo">
+                <img [src]="jobData.logo" alt="logo">
+            </div>
+            <div class="company-link">
+                <div class="company">
+                    <p>{{ jobData.company }}</p>
+                    <p>{{ jobData.company }}.com</p>
+                </div>
+                <div class="apply-link">
+                    <a class="btn" [href]="jobData.website">Company Site</a>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+    <div class="container--job-describe">
+        <mat-card>
+            <div class="apply"></div>
+            <div class="about-company">
+                <p>{{ jobData.description }}</p>
+            </div>
+            <div class="requirements">
+                <h2>Requirements</h2>
+                <p>{{ jobData.requirements.content }}</p>
+                <ul *ngFor="let req of jobRequirement">
+                    <li>{{req}}</li>
+                </ul>
+            </div>
+            <div class="role">
+                <h2>What You Will Do</h2>
+                <p>{{ jobData.role.content }}</p>
+                <ol *ngFor="let role of jobRole; let i = index">
+                    <li>{{role}}</li>
+                </ol>
+            </div>
+        </mat-card>
+    </div>
+    <div class="container__job-apply">
+        <div class="company">
+            <h2>{{ jobData.position }}</h2>
+            <p>{{ jobData.company }}</p>
+        </div>
+        <div class="btn-apply">
+            <button mat-raised-button color="primary">Apply</button>
+        </div>
+    </div>
+</div>

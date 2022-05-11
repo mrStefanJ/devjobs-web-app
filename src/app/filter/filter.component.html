@@ -1,0 +1,7 @@
+<form class="formSearch">
+    <input type="search" class="formSearch__input" [(ngModel)]="searchTerm" [ngModelOptions]="{standalone: true}"
+        (keyup)="search($event)" />
+    <div class="formSearch__chckbox">
+        <input type="checkbox" (click)="toggleShow()" />Full Time Only
+    </div>
+</form>

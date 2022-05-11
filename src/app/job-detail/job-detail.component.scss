@@ -1,0 +1,53 @@
+@import "../../assets/style/variables";
+
+.job-detail__container{
+    display: flex;
+    flex-direction: column;
+    
+    .container--company{
+        height: auto;
+        margin: 10px 20px;
+        .card{
+            text-align: center;
+        }
+        .logo{
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .container--job-describe{
+        margin: 10px 20px;
+    }
+}
+
+.container__job-apply{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    text-align: center;
+
+    @media(min-width: $breakpoint-table){
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .company{
+        margin-top: 10px;
+
+        @media(min-width: $breakpoint-table){
+            text-align: left;
+            margin-left: 20px;
+        }
+    }
+
+    .btn-apply{
+        margin-bottom: 10px;
+        @media(min-width: $breakpoint-table){
+            margin-right: 20px;
+        }
+    }
+}

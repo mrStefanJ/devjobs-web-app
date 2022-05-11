@@ -1,0 +1,61 @@
+@import "../../assets/style/variables";
+
+.container__jobs{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 50px;
+
+    @media(min-width: $breakpoint-table){
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .job-description{
+        width: 300px;
+        margin-bottom: 40px;
+
+        @media(min-width: $breakpoint-table){
+            width: 400px;
+        }
+        .job{
+            position: relative;
+            margin: 0 10px;
+            height: 200px;
+            border: 1px solid grey;
+            box-shadow: 6px 11px 19px 0px grey;
+            .job-logo{
+                position: absolute;
+                top: -20px;
+                left: 10%;
+                background: #1e00c7;
+                width: 50px;
+                height: 50px;
+                border-radius: 16px;
+                img{
+                    position: absolute;
+                    top: 28%;
+                    left: 12%;
+                }
+            }
+
+            .test{
+                margin-top: 30px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        .company__position{
+            font-weight: bold;
+
+            &:hover{
+                color: grey;
+                cursor: pointer;
+            }
+        }
+    }
+}

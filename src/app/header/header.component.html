@@ -1,0 +1,16 @@
+<header>
+    <mat-toolbar>
+            <div class="title">
+                <a (click)="gotoHomePage()">devjobs</a>
+            </div>
+            <span class="spacer"></span>
+            <div class="toggle">
+                <span><i class="fa-solid fa-sun"></i></span>
+                <label class="switch-theme">
+                    <!-- <input type="checkbox" (click)="toggle()"> -->
+                    <mat-slide-toggle (change)="onDarkModeSwitched($event)"></mat-slide-toggle>
+                </label>
+                <span><i class="fa-solid fa-moon"></i></span>
+            </div>
+    </mat-toolbar>
+</header>

@@ -1,0 +1,24 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+
+
+// Create the theme objects (a Sass map containing all of the palettes).
+// $mat-light-theme: mat-light-theme();
+// $mat-dark-theme: mat-dark-theme();
+
+// Load core styles which independant from theme
+// It should be included once
+// @include app-style-core();
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+}
+
+// .theme-dark {
+//   @include app-theme($mat-dark-theme);
+// }
+// .theme-light {
+//   @include app-theme($mat-light-theme);
+// }

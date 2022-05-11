@@ -1,0 +1,23 @@
+<app-filter
+    (isShow)="isFullTime"
+></app-filter>
+
+<div class="container__jobs" *ngIf="jobListData">
+    <div>
+        <input type="checkbox" (click)="toggleShow()">
+    </div>
+    <div class="job-description" *ngFor="let job of jobListData | searchFilter: searchKey: 'position'">
+        <mat-card class="job" *ngIf="!isFullTime">
+            <div class="job-logo">
+                <img [src]="job.logo" alt="logo">
+            </div>
+            <div class="test">
+                <p class="job__posted">{{ job.postedAt}}</p>
+                <p class="job__contract">{{ job.contract }}</p>
+            </div>
+            <a class="company__position" (click)="gotoDetails(job)">{{ job.position }}</a>
+            <p class="company-title">{{ job.company }}</p>
+            <p class="company__location">{{ job.location }}</p>
+        </mat-card>
+    </div>
+</div>
