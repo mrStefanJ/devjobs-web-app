@@ -14,7 +14,7 @@
     }
 
     .job-description{
-        width: 300px;
+        width: 350px;
         margin-bottom: 40px;
 
         @media(min-width: $breakpoint-table){
@@ -24,8 +24,7 @@
             position: relative;
             margin: 0 10px;
             height: 200px;
-            border: 1px solid grey;
-            box-shadow: 6px 11px 19px 0px grey;
+            //background-color: #7c7979;
             .job-logo{
                 position: absolute;
                 top: -20px;
@@ -41,21 +40,31 @@
                 }
             }
 
-            .test{
+            .post-job{
                 margin-top: 30px;
                 display: flex;
                 flex-direction: row;
-                justify-content: space-between;
+                // justify-content: space-between;
+                color: grey;
+
+                &__posted{}
+                &__contract{}
             }
         }
 
         .company__position{
             font-weight: bold;
+            font-size: 24px;
 
             &:hover{
                 color: grey;
                 cursor: pointer;
             }
+        }
+
+        .company__location{
+            color: #5000c7;
+            font-weight: bold;
         }
     }
 }
