@@ -1,3 +1,15 @@
+@import '../../assets/style/variables';
+
+.header__container{
+    background-image: url('../../assets/mobile/bg-pattern-header.svg');
+    width: 100%;
+    height: 100px;
+    @media(min-width: $breakpoint-table) {
+        background-image: url('../../assets/tablet-desktop/bg-pattern-header.svg');
+        background-repeat: round;
+    }
+}
+
 .title{
     a{
         cursor: pointer;
