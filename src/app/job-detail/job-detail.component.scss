@@ -1,53 +1,111 @@
 @import "../../assets/style/variables";
 
-.job-detail__container{
-    display: flex;
-    flex-direction: column;
-    
-    .container--company{
+.job-detail__container {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: $breakpoint-table) {
+    width: 80%;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+  }
+
+  .container--company {
+    height: auto;
+    margin: 10px 20px;
+    .card {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      position: relative;
+
+      @media (min-width: $breakpoint-table) {
+        flex-direction: row;
+      }
+    }
+    .logo {
+      width: 60px;
+      height: 40px;
+      background-color: #791313;
+      position: absolute;
+      left: 40%;
+      top: -18%;
+      @media (min-width: $breakpoint-table) {
+        width: 100px;
+        position: relative;
         height: auto;
-        margin: 10px 20px;
-        .card{
-            text-align: center;
+        left: 0;
+      }
+
+      img {
+        position: absolute;
+        top: 34%;
+        right: 16%;
+        @media (min-width: $breakpoint-table) {
+          top: 40%;
+          right: 16%;
+          height: 20px;
         }
-        .logo{
-            width: 50px;
-            height: 50px;
-        }
+      }
     }
 
-    .container--job-describe{
-        margin: 10px 20px;
+    .company-link {
+      height: 140px;
+      @media (min-width: $breakpoint-table) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        width: 100%;
+        justify-content: space-around;
+      }
+      .company {
+        h3 {
+          margin-bottom: 0;
+        }
+        p {
+          margin-top: 0;
+          color: grey;
+          font-size: 14px;
+        }
+      }
     }
+  }
+
+  .container--job-describe {
+    margin: 10px 20px;
+  }
 }
 
-.container__job-apply{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-    background-color: #ffffff;
-    text-align: center;
+.container__job-apply {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  text-align: center;
 
-    @media(min-width: $breakpoint-table){
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+  @media (min-width: $breakpoint-table) {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+  }
+
+  .company {
+    margin-top: 10px;
+
+    @media (min-width: $breakpoint-table) {
+      text-align: left;
+      margin-left: 20px;
     }
+  }
 
-    .company{
-        margin-top: 10px;
-
-        @media(min-width: $breakpoint-table){
-            text-align: left;
-            margin-left: 20px;
-        }
+  .btn-apply {
+    margin-bottom: 10px;
+    @media (min-width: $breakpoint-table) {
+      margin-right: 20px;
     }
-
-    .btn-apply{
-        margin-bottom: 10px;
-        @media(min-width: $breakpoint-table){
-            margin-right: 20px;
-        }
-    }
+  }
 }
